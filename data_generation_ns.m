@@ -1,5 +1,5 @@
 clear; close all; rng(42);
-rng(42);
+
 %% Model
 A = [0 1; 0 0];
 B = [0; 1];
@@ -74,7 +74,6 @@ t_end = cputime;
 
 fprintf(['\nSimulation time: ', num2str(t_end-t_start), 's\n'])
 
-% --------- Start Modifying Code Here -----------
 x(:,end) = [];
 t = linspace(0,Tmax,kf);
 
