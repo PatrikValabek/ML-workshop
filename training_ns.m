@@ -2,7 +2,7 @@ clear; close all; rng(42);
 
 %% Loadnig data
 input_data = load('.mat');
-outputload('.mat');
+output_data = load('.mat');
 
 %% Creation of NN
 % Define custom neural network architecture
@@ -42,11 +42,11 @@ net = fitnet(hiddenLayerSizes);
 
 
 %% view NN arch
-% view(net)
+view(net)
 
 %% Training
-%net = train(net, input_data, output_data);
+net = train(net, input_data, output_data);
 
 %% Saving
-%save ('.mat', 'net')
+save ('.mat', 'net')
 
